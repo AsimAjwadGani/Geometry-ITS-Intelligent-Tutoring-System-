@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:absolute:h/"
+     xml:base="urn:absolute:h/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:GeometryITS="http://www.example.org/GeometryITS#">
+    <owl:Ontology rdf:about="http://www.example.org/GeometryITS">
+        <owl:versionIRI rdf:resource="http://www.example.org/GeometryITS/1.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/GeometryITS#areaFormulaText -->
+
+    <owl:AnnotationProperty rdf:about="http://www.example.org/GeometryITS#areaFormulaText"/>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#formulatext -->
+
+    <owl:AnnotationProperty rdf:about="http://www.example.org/GeometryITS#formulatext"/>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#perimeterFormulaText -->
+
+    <owl:AnnotationProperty rdf:about="http://www.example.org/GeometryITS#perimeterFormulaText"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/GeometryITS#hasArea -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/GeometryITS#hasArea">
+        <rdfs:domain rdf:resource="http://www.example.org/GeometryITS#GeometricShape"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#hasBase -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/GeometryITS#hasBase">
+        <rdfs:domain rdf:resource="http://www.example.org/GeometryITS#Triangle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#hasHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/GeometryITS#hasHeight">
+        <rdfs:domain rdf:resource="http://www.example.org/GeometryITS#Triangle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#hasPerimeter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/GeometryITS#hasPerimeter">
+        <rdfs:domain rdf:resource="http://www.example.org/GeometryITS#GeometricShape"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#hasRadius -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/GeometryITS#hasRadius">
+        <rdfs:domain rdf:resource="http://www.example.org/GeometryITS#Circle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#hasSideLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/GeometryITS#hasSideLength">
+        <rdfs:domain rdf:resource="http://www.example.org/GeometryITS#Rectangle"/>
+        <rdfs:domain rdf:resource="http://www.example.org/GeometryITS#Square"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#hasWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/GeometryITS#hasWidth">
+        <rdfs:domain rdf:resource="http://www.example.org/GeometryITS#Rectangle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/GeometryITS#Circle -->
+
+    <owl:Class rdf:about="http://www.example.org/GeometryITS#Circle">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/GeometryITS#GeometricShape"/>
+        <GeometryITS:areaFormulaText>&quot;3.14 * radius * radius&quot;</GeometryITS:areaFormulaText>
+        <GeometryITS:perimeterFormulaText>&quot;2 * 3.14 * radius&quot;</GeometryITS:perimeterFormulaText>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#GeometricShape -->
+
+    <owl:Class rdf:about="http://www.example.org/GeometryITS#GeometricShape"/>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#Rectangle -->
+
+    <owl:Class rdf:about="http://www.example.org/GeometryITS#Rectangle">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/GeometryITS#GeometricShape"/>
+        <GeometryITS:areaFormulaText>&quot;length * width&quot;</GeometryITS:areaFormulaText>
+        <GeometryITS:perimeterFormulaText>&quot;2 * (length + width)&quot;</GeometryITS:perimeterFormulaText>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#Square -->
+
+    <owl:Class rdf:about="http://www.example.org/GeometryITS#Square">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/GeometryITS#GeometricShape"/>
+        <GeometryITS:areaFormulaText>&quot;side * side&quot;</GeometryITS:areaFormulaText>
+        <GeometryITS:perimeterFormulaText>&quot;4 * side&quot;</GeometryITS:perimeterFormulaText>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#Triangle -->
+
+    <owl:Class rdf:about="http://www.example.org/GeometryITS#Triangle">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/GeometryITS#GeometricShape"/>
+        <GeometryITS:areaFormulaText>&quot;0.5 * base * height&quot;</GeometryITS:areaFormulaText>
+        <GeometryITS:perimeterFormulaText>&quot;side1 + side2 + side3&quot;</GeometryITS:perimeterFormulaText>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/GeometryITS#AreaOfCircle -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/GeometryITS#AreaOfCircle">
+        <GeometryITS:formulatext>3.14 * radius * radius</GeometryITS:formulatext>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#AreaOfRectangle -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/GeometryITS#AreaOfRectangle">
+        <GeometryITS:formulatext>length * width</GeometryITS:formulatext>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#AreaOfSquare -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/GeometryITS#AreaOfSquare">
+        <GeometryITS:formulatext>side * side</GeometryITS:formulatext>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#AreaOfTriangle -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/GeometryITS#AreaOfTriangle">
+        <GeometryITS:formulatext>0.5 * base * height</GeometryITS:formulatext>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#PerimeterOfRectangle -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/GeometryITS#PerimeterOfRectangle">
+        <GeometryITS:formulatext>2 * (length + width)</GeometryITS:formulatext>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#PerimeterOfSquare -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/GeometryITS#PerimeterOfSquare">
+        <GeometryITS:formulatext>4 * side</GeometryITS:formulatext>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/GeometryITS#PerimeterOfTriangle -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/GeometryITS#PerimeterOfTriangle">
+        <GeometryITS:formulatext>side1 + side2 + side3</GeometryITS:formulatext>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/GeometryITS#Circle"/>
+            <rdf:Description rdf:about="http://www.example.org/GeometryITS#Rectangle"/>
+            <rdf:Description rdf:about="http://www.example.org/GeometryITS#Square"/>
+            <rdf:Description rdf:about="http://www.example.org/GeometryITS#Triangle"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
